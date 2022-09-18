@@ -6,8 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.composemarvel.BottomBarScreens
 import com.example.composemarvel.screens.homeScreen.HomePage
-import com.example.composemarvel.screens.SearchPage
-import com.example.composemarvel.screens.CategoriesPage
+import com.example.composemarvel.screens.searchScreen.SearchPage
+import com.example.composemarvel.screens.favoriteScreen.FavoritePage
 
 @Composable
 fun BaseNavGraph(navController: NavHostController) {
@@ -17,15 +17,15 @@ fun BaseNavGraph(navController: NavHostController) {
     ){
 
         composable(route = BottomBarScreens.HomeBottomBarScreens.route){
-            HomePage(navController)
+            HomePage(navController = navController)
         }
 
-        composable(route = BottomBarScreens.CategoriesBottomBarScreens.route){
-            CategoriesPage()
+        composable(route = BottomBarScreens.FavoriteBottomBarScreens.route){
+            FavoritePage()
         }
 
         composable(route = BottomBarScreens.SearchBottomBarScreens.route){
-            SearchPage()
+            SearchPage(navController = navController)
         }
 
         imageDetailsNavGraph(navController = navController)

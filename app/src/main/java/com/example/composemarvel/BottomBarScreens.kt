@@ -1,12 +1,13 @@
 package com.example.composemarvel
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.example.composemarvel.util.Constants.CATEGORIES
-import com.example.composemarvel.util.Constants.CATEGORIES_ROUTE
+import com.example.composemarvel.util.Constants.FAVORITE
+import com.example.composemarvel.util.Constants.FAVORITE_ROUTE
 import com.example.composemarvel.util.Constants.HOME
 import com.example.composemarvel.util.Constants.HOME_ROUTE
 import com.example.composemarvel.util.Constants.SEARCH
@@ -23,10 +24,10 @@ sealed class BottomBarScreens(
         icon = Icons.Default.Home
     )
 
-    object CategoriesBottomBarScreens : BottomBarScreens(
-        route = CATEGORIES_ROUTE,
-        title = CATEGORIES,
-        icon = Icons.Default.ShoppingCart
+    object FavoriteBottomBarScreens : BottomBarScreens(
+        route = FAVORITE_ROUTE,
+        title = FAVORITE,
+        icon = Icons.Default.Favorite
     )
 
     object SearchBottomBarScreens : BottomBarScreens(

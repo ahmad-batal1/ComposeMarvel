@@ -1,4 +1,4 @@
-package com.example.composemarvel.widgets
+package com.example.composemarvel.components
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.RowScope
@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -18,6 +17,8 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.composemarvel.BottomBarScreens
+import com.example.composemarvel.ui.theme.PrimaryColor
+import com.example.composemarvel.ui.theme.SecondaryTextColor
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -25,13 +26,15 @@ fun NavigationBottom(navController: NavHostController) {
 
     val bottomBarScreensItems = listOf(
         BottomBarScreens.HomeBottomBarScreens,
-        BottomBarScreens.CategoriesBottomBarScreens,
-        BottomBarScreens.SearchBottomBarScreens
+        BottomBarScreens.SearchBottomBarScreens,
+        BottomBarScreens.FavoriteBottomBarScreens
     )
+
     BottomNavigation(
         navController,
         bottomBarScreensItems
     )
+
 }
 
 @Composable
@@ -49,8 +52,8 @@ private fun BottomNavigation(
             modifier = Modifier.clip(
                 RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp)
             ),
-            backgroundColor = Color.Cyan,
-            contentColor = Color.Blue
+            backgroundColor = SecondaryTextColor,
+            contentColor = PrimaryColor
         ) {
             listOfScreen.forEach { screenPage ->
                 AddItem(

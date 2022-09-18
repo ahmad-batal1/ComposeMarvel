@@ -1,4 +1,4 @@
-package com.example.composemarvel
+package com.example.composemarvel.screens.base
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable

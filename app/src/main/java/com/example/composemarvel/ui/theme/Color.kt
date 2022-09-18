@@ -9,5 +9,5 @@ val Teal200 = Color(0xFF03DAC5)
 
 val PrimaryColor = Color(0xFF293241)
 val SecondaryColor = Color(0xFF3d5a80)
-val PrimaryTextColor = Color(0xFF98c1d9)
-val SecondaryTextColor = Color(0xFFe0fbfc)
+val SecondaryTextColor= Color(0xFF98c1d9)
+val PrimaryTextColor = Color(0xFFe0fbfc)

@@ -2,7 +2,7 @@ package com.example.composemarvel.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class MarvelResponse(
+data class MarvelComicsResponse(
     @SerializedName("data")
-    val marvelDataResponse:MarvelResults
+    val marvelDataResponse:MarvelComicsResult
 )
